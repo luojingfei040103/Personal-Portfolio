@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>种类</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./css/kind.css">
+</head>
+
+<body>
+
+
+  <br><br><br><br><br><br>
+  <section class="price-one" id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <h2 class="title">全息种类</h2>
+          <p class="text">全息投影的种类可以分为：<br>透射全息投影，<br>另一种常见的全息投影技术称为反射全息投影，<br>或称为丹尼苏克全息投影。
+          </p>
+          <div class="tab-btn" id="tab-title">
+            <a href="#monthly" class="single active">透射</a>
+            <a href="#yearly" class="single">反射</a>
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          <div class="content">
+            <div class="one active" id="monthly">
+              <div class="inner">
+                <div class="price">
+                  <span class="currency">透射全息投影</span>
+
+                </div>
+                透射全息投影，如利思和乌帕特尼克斯所发明的技术，这种技术通过向全息投影胶片照射激光，然后从另一个方向来观察重建的图像。后来经过改进，彩虹全息投影可以使用白色光来照明，以观察重建的图像。彩虹全息投影广泛的应用于诸如信用卡安全防伪和产品包装等领域。这些种类的彩虹全息投影通常在一个塑料胶片形成了表面浮雕图案，然后通过在背面镀上铝膜使光线透过胶片以重建图像。
+                <hr class="line" />
+                <a href="#" class="price-one__btn thm-btn">知晓更多</a>
+              </div>
+            </div>
+
+            <div class="one" id="yearly">
+              <div class="inner">
+                <div class="price">
+                  <span class="currency">反射全息投影</span>
+                </div>
+                反射全息投影(丹尼苏克全息投影)，这种技术可以通过使用白色光源从和观察者相同的方向来照射胶片，通过反射来重建彩色的图像，以重建图像。镜面全息投影是一种通过控制镜面在二维表面上的运动来制造三维图像的相关技术。它通过控制反射光线或者折射光线来构造全息图像，而盖伯的全息投影是通过衍射光来重建波前的。
+                <hr class="line" />
+                <a href="#" class="price-one__btn thm-btn">知晓更多</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script>
+    (function ($) {
+      "use strict";
+
+      if ($('#tab-title').length) {
+        var pricingTabTitle = $('#tab-title').find('a');
+        var pricebox = $('.content').find('.one');
+        pricingTabTitle.each(function () {
+          var Self = $(this);
+          var tabelID = Self.attr('href');
+          // console.log(tabelID);
+          Self.on('click', function () {
+            pricingTabTitle.removeClass('active');
+            Self.addClass('active');
+            pricebox.removeClass('active');
+            $(tabelID).addClass('active');
+            // console.log($('#'+tabelID));
+            return false;
+          });
+        })
+      }
+
+
+
+    })(jQuery);
+
+  </script>
+</body>
+
+</html>

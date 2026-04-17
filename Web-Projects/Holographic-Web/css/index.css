@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+}
+
+.back {
+    width: 100%;
+    background-image: url("../images/1-0.png");
+}
+
+
+
+.content {
+    width: 100%;
+    position: absolute;
+    margin-top: 275px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: aliceblue;
+
+}
+
+.content-a {
+    width: 700px;
+    margin-left: 10px;
+}
+
+.content h1 {
+    text-align: left;
+    font-size: 70px;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.one {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.small p {
+    padding-left: 10px;
+    margin-left: 200px;
+    font-weight: 100px;
+    line-height: 35px;
+    text-align: left;
+}
+
+.an {
+    height: 100px;
+    width: 750px;
+    margin-top: 20px;
+}
+
+.an-1 {
+    float: left;
+    margin-left: 100px;
+}
+
+.an-2 {
+    padding-left: 10px;
+    float: right;
+}
+
+.an-1 button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 100px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid#1bb7ea;
+    background: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.an-1 span {
+    background: #1bb7ea;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.an-1 button:hover span {
+    width: 100%;
+}
+
+.an-1 button:hover {
+    border: none;
+}
+
+.an-2 button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid#1bb7ea;
+    background: transparent;
+    color: aliceblue;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.an-2 span {
+    background: #1bb7ea;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.an-2 button:hover span {
+    width: 100%;
+}
+
+.an-2 button:hover {
+    border: none;
+}

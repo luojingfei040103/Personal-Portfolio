@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "montserrat";
+}
+
+body {
+    background-color: #5f9dcf;
+}
+
+.navbar {
+    border-bottom: 1px solid #24395b;
+}
+
+.down {
+    height: 650px;
+}
+
+.product {
+    width: 1300px;
+    height: 650px;
+    margin: 0 auto;
+
+}
+
+.pro-bread {
+    margin-top: 30px;
+    padding: 10px 0 15px 30px;
+    margin-left: 35px;
+}
+
+.pro-bread a {
+    color: #fff;
+    padding-right: 5px;
+}
+
+.pro-bread a:hover {
+    color: #1bb7ea;
+}
+
+.pro-de {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.car {
+    float: left;
+    width: 250px;
+    height: 400px;
+    background: #f1f1f1;
+    margin: 20px 25px;
+}
+
+.card {
+    float: left;
+    width: 250px;
+    height: 400px;
+    background: #f1f1f1;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.top-section {
+    height: 285px;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+
+#image-container {
+    padding-top: 1px;
+    padding-left: 8px;
+    margin-bottom: 3px;
+    width: 235px;
+    height: 210px;
+}
+
+.nav {
+    text-align: center;
+    height: 60px;
+}
+
+.nav img {
+    width: 65px;
+    height: 60px;
+    border: 1px solid #ddd;
+    margin: 4px 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav img:hover {
+    border-color: #1bb7ea;
+}
+
+
+.product-info {
+    height: 100px;
+    margin-top: 1px;
+    margin-bottom: 5px;
+}
+
+.name {
+    margin-top: 5px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #333;
+}
+
+.dis {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.btn {
+    width: 210px;
+    display: block;
+    background: #1699c5;
+    text-align: center;
+    color: #fff;
+    padding: 9px;
+    margin-left: 12px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #142bd8;
+}

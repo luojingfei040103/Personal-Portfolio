@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <title>中国传统服饰网</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <!--logo-->
+            <div class="logo">
+                <img src="../imgs/logo.png">
+            </div>
+            <!--导航条-->
+            <ul class="nav">
+                <li class="but"><a href="#" id="dingbu">首页</a></li>
+                <li class="but">
+                    <a href="#">历史</a>
+                </li>
+
+                <li class="but"><a href="#dongtai">新闻</a></li>
+
+                <li class="but"><a href="#zhanshi">展示</a></li>
+                <li class="but">
+                    <a href="#fenlei">分类</a>
+                    <div></div>
+                    <ul>
+                        <li><a href="#">朝代</a></li>
+                        <li><a href="#">民族</a></li>
+                        <li><a href="#">性别</a></li>
+                    </ul>
+                </li>
+                <li class="but"><a href="/index.jsp">购物</a></li>
+                <li class="but"><a href="#">联系</a></li>
+            </ul>
+        </div>
+        <!--搜索框-->
+        <div class="header-right">
+            <input type="search" name="" id="" placeholder="请输入关键字...">
+            <button>搜索</button>
+        </div>
+    </div>
+    <br>
+
+    <!--轮播图-->
+    <div id="banner">
+        <img src="../imgs/006.jpg" alt="">
+        <img src="../imgs/004.jpg" alt="" style="display:none">
+        <img src="../imgs/003.jpg" alt="" style="display:none">
+        <img src="../imgs/006.jpg" alt="" style="display:none">
+        <img src="../imgs/004.jpg" alt="" style="display:none">
+        <!-- 小圆点 -->
+        <ul id="button">
+            <li class="select"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <br>
+    <script>
+        let imgs = document.getElementById('banner').getElementsByTagName('img');
+        let but = document.getElementById('button').getElementsByTagName('li');
+        let now = 0;
+        function auto() {
+            imgs[now].style.display = "block";
+            but[now].className = "select";
+            for (let j = 0; j < imgs.length; j++) { if (j != now) { imgs[j].style.display = "none"; but[j].className = "none"; } }
+            now++; if (now == imgs.length) now = 0;
+        }
+        let timer1 = setInterval(auto, 1500);
+    </script>
+
+    <!--时间线-->
+    <div class="dontknow">
+        <div class="container1">
+            <div class="card">
+                <div class="content">
+                    <h2>秦汉</h2>
+                    <p>男子以袍为贵，规定了不同品阶官员的袍服颜色。女子多穿深衣或襦裙，深衣衣襟层数多、下摆大 。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>隋朝</h2>
+                    <p>较为简约，尚未形成独特的风格，但为唐朝服饰的繁荣奠定了基础。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>唐朝</h2>
+                    <p>男子常服为圆领袍，头戴幞头。女子服饰多样，包括襦裙、圆领袍等，并配有精美的配饰和复杂的发式。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>宋朝</h2>
+                    <p>继承并发展了前代的服饰风格，更加注重服饰的精致与细腻。官员服饰以袍衫为主，颜色与图案都有严格规定。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>元朝</h2>
+                    <p>更多地保留了北方草原游牧民族的特色，如长袍、宽袖等，并受到汉民族的影响而建立了冠服制度。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>明朝</h2>
+                    <p>恢复汉唐传统，制定了明确细致的服装仪制。官服以补子、纹样等来区分官员品级。</p>
+                    <button>查看更多</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--展览-->
+    <div class="exhibit" id="zhanlan">
+
+        <div class="exhibit-left">
+            <div class="ti1">即将展出</div>
+            <div>暂无记录</div>
+        </div>
+        <div class="exhibit-center">
+            <div class="ti2">历史展览</div>
+
+            <div class="box1">“桑蚕记”摄影作品展
+                展出时间：2024-07-05 至 2024-09-23
+                展出地点：新猷资料馆
+            </div>
+
+            <div class="box2">九天阊阖：丝绸之路上的长安
+                展出时间：2024-06-19 至 2024-10-07
+                展出地点：时装馆临展厅、银瀚厅
+            </div>
+        </div>
+        <div class="exhibit-right">
+            <div class="ti3">展览查询</div>
+            <div class="daily">
+                <input type="one" name="" id="" placeholder="日期">
+                <input type="two" name="" id="" placeholder="日期">
+                <input type="three" name="" id="" placeholder="关键字"><br>
+                <button>搜索</button>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!--动态-->
+    <div class="state">
+        <h2 align="center" id="dongtai">动态</h2>
+        <div class="state-content">
+            <div><img src="../imgs/2.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+            <div><img src="../imgs/4.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+            <div><img src="../imgs/2.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+            <div><img src="../imgs/4.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+            <div><img src="../imgs/2.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+            <div><img src="../imgs/4.jpg" alt="">
+                <h1 class="title">2024“服装周”收官活动即将在上海举办</h1>
+                <br>
+                <p class="matter">
+                    此次活动分为五个部分，旨在生动展现汉服文化、传播传统服饰精神，持续深化与“国风”</p>
+                <br>
+                <p class="time">2024-09-23</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 活动 -->
+    <div class="act">
+        <div class="act-con">
+            <a href="#">
+                <div class="ac-img">
+                    <img src="../imgs/ac-img.png" alt="">
+                    <div class="ac-hover">
+                        <p class="p">
+                            "2025年“国丝汉服节•天工霓裳”招贤令"
+                            <span>></span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <div class="ac-right">
+                <h3 class="h3" id="huodong">活动</h3>
+                <div class="ac-news">
+                    <div class="ac-news-con">
+                        <ul>
+                            <li><a href="#">一文Vol.29｜三星堆遗址祭祀坑中丝绸的发现及其意义</a></li>
+                            <li><a href="#">2025年“国丝汉服节•天工霓裳”招贤令</a></li>
+                            <li><a href="#">一技Vol.48｜中式便装立领缝制工艺</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ac-silde">
+                    <span>
+                        <a href="#">女红传习</a>
+                    </span>
+                    <em></em>
+                    <span>
+                        <a href="#">国丝课堂</a>
+                    </span>
+                    <em></em>
+                    <span>
+                        <a href="#">经纶讲堂</a>
+                    </span>
+                    <em></em>
+                </div>
+                <div class="ac-body">
+                    <a href="#" class="book">观众留言 ></a>
+                    <a href="#" class="book right">预告 ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分类 -->
+    <div class="cate-h">
+        <h3 class="h3" id="fenlei">分类</h3>
+        <em></em>
+    </div>
+    <div class="cate-c">
+        <div class="cc-h">
+            <span class="cc-h-select">汉服雅韵</span>
+            <span>唐风华彩</span>
+            <span>宋服清逸</span>
+            <span>明裳翩跹</span>
+            <span>清装流韵</span>
+        </div>
+        <div class="cc-list">
+            <div class="wrapper">
+                <div class="cols">
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu1.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>襦裙</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu2.jpg);">
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>桂衣</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu3.jpg);">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>小袖高腰长裙</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu4.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>上衣下裳</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu5.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>襟</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu6.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>长袍</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu7.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>立领</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container">
+                            <div class="front" style="background-image: url(../imgs/fu8.jpg)">
+
+                            </div>
+                            <div class="back">
+                                <div class="inner">
+                                    <p>小袖衣，长裙</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="cc-more">查看更多></a>
+    </div>
+
+    <!-- 互动 -->
+    <div class="inter-h">
+        <h3 class="h3" id="hudong">互动</h3>
+        <em></em>
+    </div>
+    <div class="inter-c">
+        <div class="ic-img">
+            <img src="../imgs/interback.jpg" alt="">
+            <div class="ic-list">
+                <ul class="icl-c clearfix">
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter1.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">鉴赏舞台</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter2.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">文化研究</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter3.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">设计创新</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter4.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">制作技艺</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter5.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">文化传承</a>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../imgs/inter6.png" alt="">
+                        </a>
+                        <p class="p">
+                            <a href="#">时尚融合</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 展示 -->
+    <div class="show-h">
+        <h3 class="h3" id="zhanshi">展示</h3>
+        <em></em>
+    </div>
+    <div class="show-c">
+        <div class="sc-c">
+            <ul>
+                <li>
+                    <img src="../imgs/fu1.jpg" alt="">
+                    <p class="p"><a href="#">襦裙</a></p>
+                </li>
+                <li>
+                    <img src="../imgs/fu2.jpg" alt="">
+                    <p class="p"><a href="#">桂衣</a></p>
+                </li>
+                <li>
+                    <img src="../imgs/fu3.jpg" alt="">
+                    <p class="p"><a href="#">小袖高腰长裙</a></p>
+                </li>
+                <li>
+                    <img src="../imgs/fu4.jpg" alt="">
+                    <p class="p"><a href="#">上衣下裳</a></p>
+                </li>
+            </ul>
+            <div class="sc-b">
+                <div class="btn">← 向左走</div>
+                <div class="btn">向右走 →</div>
+            </div>
+        </div>
+        <a href="#" class="sc-more">查看更多></a>
+    </div>
+    <script>
+        let ul = document.querySelector('.sc-c ul');
+        ul.innerHTML = ul.innerHTML + ul.innerHTML;
+        let lis = document.querySelectorAll('.sc-c ul li');
+        let btns = document.querySelectorAll('.btn');
+        // 每次滚动的跨度（正数向右，负数向左，默认向左滚动）
+        let spa = -2;
+        // 计算并设置ul的总宽度
+        ul.style.width = lis[0].offsetWidth * lis.length + 'px';
+
+        // 滚动函数
+        function move() {
+            if (ul.offsetLeft < -ul.offsetWidth / 2) {
+                // 向左走时，判断图片是否走完（这里本来时4张图片，加上后面追加的4张相同的，共有8张，所以需要用ul的总宽度来除以2进行判断），走完时重新开始
+                ul.style.left = '0';
+            }
+            if (ul.offsetLeft > 0) {
+                // 向右走时，判断图片是否走完
+                ul.style.left = -ul.offsetWidth / 2 + 'px';
+            }
+            // 设置偏移位置
+            ul.style.left = ul.offsetLeft + spa + 'px';
+        }
+
+        // 定时器，每30毫秒执行一次move函数
+        let timer2 = setInterval(move, 30);
+
+        // 为ul绑定事件，悬停停止，移开滚动
+
+        // ul.addEventListener('mouseout', function () {
+        //     timer2 = setInterval(move, 30);
+        // })
+        // ul.addEventListener('mouseenter', function () {
+        //     clearInterval(timer2);'/'
+        // })
+        // 为两个按钮绑定点击事件
+        // 向左走
+        btns[0].addEventListener('click', function () {
+            spa = -2;
+        })
+        // 向右走
+        btns[1].addEventListener('click', function () {
+            spa = 2;
+        })
+    </script>
+    <!-- 底部 -->
+    <div class="footer">
+        <div class="m">
+            <div class="footer-nav">
+                <ul class="fn-ul clearfix">
+                    <li><a href="#">历史</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">互动</a></li>
+                    <li><a href="#">展示</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav2">
+                <ul class="fn2-ul clearfix">
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>唐朝</dd>
+                            <dd>唐朝</dd>
+                            <dd>唐朝</dd>
+                            <dd>唐朝</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>宋朝</dd>
+                            <dd>清朝</dd>
+                            <dd>清朝</dd>
+                            <dd>清朝</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>清朝</dd>
+                            <dd>清朝</dd>
+                            <dd>商朝</dd>
+                            <dd>商朝</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>商朝</dd>
+                            <dd>商朝</dd>
+                            <dd>魏晋南北朝</dd>
+                            <dd>魏晋南北朝</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>魏晋南北朝</dd>
+                            <dd>魏晋南北朝</dd>
+                            <dd>魏晋南北朝</dd>
+                            <dd>明朝</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dd>唐朝</dd>
+                            <dd>明朝</dd>
+                            <dd>明朝</dd>
+                            <dd>明朝</dd>
+                            <dd>明朝</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-share"></div>
+            <div class="links">
+                <a href="#">网站地图</a>
+                <em></em>
+                <a href="#">法律声明</a>
+                <em></em>
+                <a href="#">友情链接</a>
+                <em></em>
+                <a href="#">流量统计</a>
+            </div>
+            <div class="copyright">
+                <span>@2024 中国传统服饰网 版权所有</span>
+                <span><a href="#dingbu">回到顶部</a></span>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>

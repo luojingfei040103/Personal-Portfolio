@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./">
+
+    <link rel="stylesheet" href="./css/shop.css">
+    <link rel="stylesheet" href="./css/banner.css">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">首 页</a></li>
+            <li><a href="#">介 绍</a>
+                <div class="in">
+                    <ul>
+                        <li calss="in-in"><a href="theory.html"> 原&nbsp; 理</li>
+                        <li calss="in-in"><a href="timeline.html"> 发 &nbsp;展</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="shop.html" style="color:#1bb7ea">产 品</a></li>
+            <li><a href="kind.html">种  类</a></li>
+            <li><a href="login.html">登 录</a></li>
+        </ul>
+    </div>
+
+    <div class="down">
+        <div class="product">
+            <div class="pro-bread">
+                <a href="javascript:;"> 首页 > </a>
+                <a href="javascript:;"> 产品 > </a>
+                <span>全息投影仪</span>
+            </div>
+            <div class="pro-de">
+                <div class="car">
+                    <div class="top-section">
+                        <img id="image-container" src="./images/a.jpg" alt="">
+                        <div class="nav">
+                            <img onclick="change_img(this)" src="./images/a.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/b.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/c.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="name">全息青花瓷</div>
+                        <div class="dis">将烫金艺术与全息投影结合</div>
+                        <a class="btn" href="product-dev.html">加入购物车</a>
+                    </div>
+                </div>
+
+                <div class="car">
+                    <div class="top-section">
+                        <img id="image-container" src="./images/a.jpg" alt="">
+                        <div class="nav">
+                            <img onclick="change_img(this)" src="./images/a.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/b.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/c.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="name">全息青花瓷</div>
+                        <div class="dis">将烫金艺术与全息投影结合</div>
+                        <a class="btn" href="product-dev.html">加入购物车</a>
+                    </div>
+                </div>
+
+                <div class="car">
+                    <div class="top-section">
+                        <img id="image-container" src="./images/a.jpg" alt="">
+                        <div class="nav">
+                            <img onclick="change_img(this)" src="./images/a.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/b.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/c.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="name">全息青花瓷</div>
+                        <div class="dis">将烫金艺术与全息投影结合</div>
+                        <a class="btn" href="product-dev.html">加入购物车</a>
+                    </div>
+                </div>
+
+                <div class="car">
+                    <div class="top-section">
+                        <img id="image-container" src="./images/a.jpg" alt="">
+                        <div class="nav">
+                            <img onclick="change_img(this)" src="./images/a.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/b.jpg" alt="">
+                            <img onclick="change_img(this)" src="./images/c.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="product-info">
+                        <div class="name">全息青花瓷</div>
+                        <div class="dis">将烫金艺术与全息投影结合</div>
+                        <a class="btn" href="#">加入购物车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript">
+        var container = document.getElementById("image-container");
+        function change_img(image) {
+            container.src = image.src;
+        }
+    </script>
+
+</body>
+
+</html>
